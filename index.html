@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Financial Calculator - ADA University | Master of HRM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Financial Calculator</h1>
+        <div class="calculator">
+
+            <!-- Select Financial Function -->
+            <label for="calcType">Choose a Calculation:</label>
+            <select id="calcType" onchange="toggleFields()">
+                <option value="pv_single">PV - Single Cash Flow</option>
+                <option value="pv_multiple">PV - Multiple Cash Flow</option>
+                <option value="fv_single">FV - Single Cash Flow</option>
+                <option value="fv_multiple">FV - Multiple Cash Flow</option>
+                <option value="ordinary_perpetuity">Ordinary Perpetuity</option>
+                <option value="perpetuity_due">Perpetuity Due</option>
+                <option value="ordinary_annuity">Ordinary Annuity</option>
+                <option value="annuity_due">Annuity Due</option>
+                <option value="loan_amortization">Loan Amortization</option>
+                <option value="npv">NPV</option>
+            </select>
+
+            <!-- Input Fields -->
+            <div class="input-fields">
+                <div id="cashFlowField">
+                    <label for="cashFlow">Cash Flow (CF):</label>
+                    <input type="number" id="cashFlow" placeholder="Enter cash flow">
+                </div>
+
+                <div id="rateField">
+                    <label for="rate">Interest Rate (r%):</label>
+                    <input type="number" id="rate" placeholder="Enter interest rate (%)">
+                </div>
+
+                <div id="timeField">
+                    <label for="time">Time Period (t):</label>
+                    <input type="number" id="time" placeholder="Enter time period (years)" onchange="addCashFlowInputs()">
+                </div>
+
+                <div id="cashFlowsField">
+                    <div id="cashFlowInputs"></div>
+                </div>
+
+                <div id="initialInvestmentField">
+                    <label for="initialInvestment">Initial Investment:</label>
+                    <input type="number" id="initialInvestment" placeholder="Enter initial investment">
+                </div>
+            </div>
+
+            <!-- Calculate and Clear Buttons -->
+            <button class="button" onclick="calculate()">Calculate</button>
+            <button class="button clear-btn" onclick="clearFields()">Clear</button>
+
+            <!-- Output -->
+            <div id="output" class="output"></div>
+
+            <!-- Calculation Steps and Formula -->
+            <table id="calculationTable" class="calculation-table hidden">
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Calculation</th>
+                    </tr>
+                </thead>
+                <tbody id="calculationSteps"></tbody>
+            </table>
+
+            <table id="formulaTable" class="formula-table hidden">
+                <thead>
+                    <tr>
+                        <th>Formula</th>
+                    </tr>
+                </thead>
+                <tbody id="formula"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Nizami Tahirov. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

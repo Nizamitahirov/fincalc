@@ -1,0 +1,113 @@
+body {
+    background-color: #0d0d0d;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.calculator {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0066;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff0066;
+}
+
+.button:hover {
+    background-color: #ff1a75;
+    box-shadow: 0 0 30px #ff0066;
+}
+
+.clear-btn {
+    background-color: #666;
+    margin-left: 10px;
+}
+
+.clear-btn:hover {
+    background-color: #777;
+    box-shadow: 0 0 20px #777;
+}
+
+.output {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #39ff14;
+}
+
+.hidden {
+    display: none;
+}
+
+.calculation-table, .formula-table {
+    margin: 20px auto;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.calculation-table th, .calculation-table td, .formula-table th, .formula-table td {
+    border: 1px solid #444;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.calculation-table th, .formula-table th {
+    background-color: #ff0066;
+}
+
+.formula-table td {
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #0d0d0d;
+    padding: 10px 0;
+    color: #999999;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
